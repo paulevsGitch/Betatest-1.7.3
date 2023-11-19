@@ -1,0 +1,12 @@
+Texture                       Author           Source                                                             Edits
+
+stones_stone                  paulevs          none                                                               none
+stones_cobblestone            paulevs          none                                                               none
+stones_bedrock                paulevs          none                                                               none
+
+soils_dirt                    viper_sprites    https://www.curseforge.com/minecraft/texture-packs/gleam-things    none
+soils_sand                    viper_sprites    https://www.curseforge.com/minecraft/texture-packs/gleam-things    none
+soils_dirt_with_grass_side    viper_sprites    https://www.curseforge.com/minecraft/texture-packs/gleam-things    grass shadow
+soils_gravel                  viper_sprites    https://www.curseforge.com/minecraft/texture-packs/gleam-things    palette change
+soils_grass_side              paulevs          none                                                               none
+soils_grass_top               paulevs          none                                                               none

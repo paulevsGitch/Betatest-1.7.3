@@ -1,0 +1,8 @@
+Sound            Author               Source                                                           Edits
+
+item_pickup.1    el_boss              https://freesound.org/people/el_boss/sounds/665183/              none
+item_pickup.2    el_boss              https://freesound.org/people/el_boss/sounds/665182/              none
+item_pickup.3    el_boss              https://freesound.org/people/el_boss/sounds/665181/              none
+
+tools_break      abstraktgeneriert    https://freesound.org/people/SamsterBirdies/sounds/587443/       reverb, curves
+                 Slap.wav             https://freesound.org/people/abstraktgeneriert/sounds/233631/    reverb, curves

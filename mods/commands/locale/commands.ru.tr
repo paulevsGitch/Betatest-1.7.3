@@ -1,0 +1,8 @@
+# textdomain: commands
+Removes all dropped items in the world=Убирает все предметы в мире
+Removed items=Убрано предметов
+Time operation command, can get or set time of day=Команда работы со временем, может вернуть или установить время дня
+Current time of day=Текущее время дня
+Time set to day=Установлен день
+Time set to night=Установлена ночь
+Time of day was set to=Время было установлено на
