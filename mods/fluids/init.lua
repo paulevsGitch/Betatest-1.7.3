@@ -1,7 +1,26 @@
 local S = minetest.get_translator()
 
-local path = minetest.get_modpath("fluids")
---dofile(path .. "/underwater.lua")
+local texture_source = {
+	name = "fluids_water.png",
+	backface_culling = false,
+	animation = {
+		type = "vertical_frames",
+		aspect_w = 16,
+		aspect_h = 16,
+		length = 8.0,
+	}
+}
+
+local texture_flowing = {
+	name = "fluids_water.png",
+	backface_culling = false,
+	animation = {
+		type = "vertical_frames",
+		aspect_w = 16,
+		aspect_h = 16,
+		length = 4.0,
+	}
+}
 
 minetest.register_node("fluids:water_source", {
 	description = S("Water Source"),
@@ -9,28 +28,7 @@ minetest.register_node("fluids:water_source", {
 	paramtype2 = "flowingliquid",
 	leveled = 4,
 	waving = 3,
-	tiles = {
-		{
-			name = "fl_water_source.png",
-			backface_culling = false,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 6.0,
-			},
-		},
-		{
-			name = "fl_water_source.png",
-			backface_culling = true,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 6.0,
-			},
-		},
-	},
+	tiles = {texture_source, texture_source},
 	use_texture_alpha = "blend",
 	paramtype = "light",
 	sunlight_propagates = false,
@@ -53,38 +51,8 @@ minetest.register_node("fluids:water_flowing", {
 	description = S("Flowing Water"),
 	drawtype = "flowingliquid",
 	waving = 3,
-	tiles = {
-		name = "fl_water_source.png",
-		backface_culling = false,
-		animation = {
-			type = "vertical_frames",
-			aspect_w = 16,
-			aspect_h = 16,
-			length = 6.0,
-		},
-	},
-	special_tiles = {
-		{
-			name = "fl_water_flow.png",
-			backface_culling = false,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 2.0,
-			},
-		},
-		{
-			name = "fl_water_flow.png",
-			backface_culling = true,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 2.0,
-			},
-		},
-	},
+	tiles = {texture_flowing},
+	special_tiles = {texture_flowing, texture_flowing},
 	use_texture_alpha = "blend",
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
