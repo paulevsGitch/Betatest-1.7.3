@@ -1,11 +1,11 @@
 MINING_LEVELS = {
-	tools = {
+	TOOLS = {
 		PICKAXE = "required_tool_pickaxe",
 		AXE = "required_tool_axe",
 		SHOVEL = "required_tool_showel",
 		SHEARS = "required_tool_shears"
 	},
-	levels = {
+	LEVELS = {
 		HAND = 1,
 		WOOD = 2,
 		STONE = 3,
@@ -24,7 +24,7 @@ MINING_LEVELS = {
 			mining_speed = 1.0
 		end
 
-		for _, level in pairs(MINING_LEVELS.levels) do
+		for _, level in pairs(MINING_LEVELS.LEVELS) do
 			local time = level / tool_level
 			if time > 1 then
 				time = time * 3
@@ -50,7 +50,7 @@ MINING_LEVELS = {
 
 		times = {}
 
-		for _, level in pairs(MINING_LEVELS.levels) do
+		for _, level in pairs(MINING_LEVELS.LEVELS) do
 			local time = level
 			if time > 1 then
 				time = time * 3
@@ -61,7 +61,7 @@ MINING_LEVELS = {
 			times[level] = time / mining_speed
 		end
 
-		for _, tool in pairs(MINING_LEVELS.tools) do
+		for _, tool in pairs(MINING_LEVELS.TOOLS) do
 			if not groupcaps[tool] then
 				groupcaps[tool] = {
 					times = times,

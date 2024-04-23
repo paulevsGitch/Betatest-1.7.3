@@ -56,7 +56,7 @@ local function register_toolset(material_name, tool_level, uses, mining_speed)
 		wield_image = "tools_" .. material_name .. "_pickaxe.png",
 		stack_max = 1,
 		range = 5.0,
-		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.tools.PICKAXE, tool_level, uses, mining_speed),
+		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.TOOLS.PICKAXE, tool_level, uses, mining_speed),
 		after_use = use_tool,
 		_max_usages = uses
 	})
@@ -68,7 +68,7 @@ local function register_toolset(material_name, tool_level, uses, mining_speed)
 		wield_image = "tools_" .. material_name .. "_axe.png",
 		stack_max = 1,
 		range = 5.0,
-		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.tools.AXE, tool_level, uses, mining_speed),
+		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.TOOLS.AXE, tool_level, uses, mining_speed),
 		after_use = use_tool,
 		_max_usages = uses
 	})
@@ -80,7 +80,7 @@ local function register_toolset(material_name, tool_level, uses, mining_speed)
 		wield_image = "tools_" .. material_name .. "_shovel.png",
 		stack_max = 1,
 		range = 5.0,
-		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.tools.AXE, tool_level, uses, mining_speed),
+		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.TOOLS.AXE, tool_level, uses, mining_speed),
 		after_use = use_tool,
 		_max_usages = uses
 	})
@@ -92,14 +92,14 @@ local function register_toolset(material_name, tool_level, uses, mining_speed)
 		wield_image = "tools_" .. material_name .. "_hoe.png",
 		stack_max = 1,
 		range = 5.0,
-		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.tools.AXE, tool_level, uses, mining_speed),
+		tool_capabilities = MINING_LEVELS.make_tool_capabilities(MINING_LEVELS.TOOLS.AXE, tool_level, uses, mining_speed),
 		after_use = use_tool,
 		_max_usages = uses
 	})
 end
 
-register_toolset("wooden", MINING_LEVELS.levels.WOOD, 60)
-register_toolset("stone", MINING_LEVELS.levels.STONE, 130)
-register_toolset("iron", MINING_LEVELS.levels.IRON, 250)
-register_toolset("golden", MINING_LEVELS.levels.GOLD, 30, 2.0)
-register_toolset("diamond", MINING_LEVELS.levels.DIAMOND, 1560)
+register_toolset("wooden", MINING_LEVELS.LEVELS.WOOD, 60)
+register_toolset("stone", MINING_LEVELS.LEVELS.STONE, 130)
+register_toolset("iron", MINING_LEVELS.LEVELS.IRON, 250)
+register_toolset("golden", MINING_LEVELS.LEVELS.GOLD, 30, 2.0)
+register_toolset("diamond", MINING_LEVELS.LEVELS.DIAMOND, 1560)

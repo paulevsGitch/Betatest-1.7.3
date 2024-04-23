@@ -43,8 +43,7 @@ minetest.register_node("fluids:water_source", {
 	liquid_alternative_flowing = "fluids:water_flowing",
 	liquid_alternative_source = "fluids:water_source",
 	liquid_viscosity = 1,
-	post_effect_color = {a = 103, r = 30, g = 60, b = 90},
-	groups = {water = 3, liquid = 3, cools_lava = 1}
+	post_effect_color = {a = 103, r = 30, g = 60, b = 90}
 })
 
 minetest.register_node("fluids:water_flowing", {
@@ -69,5 +68,5 @@ minetest.register_node("fluids:water_flowing", {
 	liquid_alternative_source = "fluids:water_source",
 	liquid_viscosity = 1,
 	post_effect_color = {a = 103, r = 30, g = 60, b = 90},
-	groups = {water = 3, liquid = 3, not_in_creative_inventory = 1, cools_lava = 1}
+	groups = {not_in_creative_inventory = 1}
 })

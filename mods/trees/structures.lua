@@ -1,6 +1,6 @@
 local node_data = {}
 
-TREES.make_tree = function(vm, pos, node_data)
+trees.make_tree = function(vm, pos, nodes)
 	local height = math.random(3, 5)
 
 	local log_id = minetest.get_content_id("trees:oak_log")
@@ -14,8 +14,8 @@ TREES.make_tree = function(vm, pos, node_data)
 
 	for y = 0, height do
 		index = va:index(pos.x, pos.y + y, pos.z)
-		if node_data[index] == air_id then
-			node_data[index] = log_id
+		if nodes[index] == air_id then
+			nodes[index] = log_id
 		end
 	end
 
@@ -24,8 +24,8 @@ TREES.make_tree = function(vm, pos, node_data)
 			for z = -2, 2 do
 				if math.abs(x) ~= 2 or math.abs(z) ~= 2 then
 					index = va:index(pos.x + x, pos.y + y, pos.z + z)
-					if node_data[index] == air_id then
-						node_data[index] = leaves_id
+					if nodes[index] == air_id then
+						nodes[index] = leaves_id
 					end
 				end
 			end
@@ -35,8 +35,8 @@ TREES.make_tree = function(vm, pos, node_data)
 	for x = -1, 1 do
 		for z = -1, 1 do
 			index = va:index(pos.x + x, pos.y + height + 1, pos.z + z)
-			if node_data[index] == air_id then
-				node_data[index] = leaves_id
+			if nodes[index] == air_id then
+				nodes[index] = leaves_id
 			end
 		end
 	end
@@ -45,8 +45,8 @@ TREES.make_tree = function(vm, pos, node_data)
 		for z = -1, 1 do
 			if math.abs(x) ~= 1 or math.abs(z) ~= 1 then
 				index = va:index(pos.x + x, pos.y + height + 2, pos.z + z)
-				if node_data[index] == air_id then
-					node_data[index] = leaves_id
+				if nodes[index] == air_id then
+					nodes[index] = leaves_id
 				end
 			end
 		end
@@ -75,7 +75,7 @@ minetest.register_chatcommand("tree", {
 		local vm = minetest.get_voxel_manip(pmin, pmax)
 		
 		vm:get_data(node_data)
-		TREES.make_tree(vm, pos, node_data)
+		trees.make_tree(vm, pos, node_data)
 		vm:set_data(node_data)
 		vm:write_to_map(true)
 
